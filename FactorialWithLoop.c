@@ -1,34 +1,23 @@
-//YOU CAN USE ANY LOOP
-#include<stdio.h>
-int main()
-{
-	int num;
-	int i;
-	int f=1;
-	printf("enter a number\n");
-	scanf("%d",&num);
-	//using for loop
-	for(i=num;i>=1;i--)
-	{
-	f*=i;		
-	}
-	printf("factorial of %d is : %d\n",num,f);
-	//using while loop
-	f=1;
-	i=num;
-	while(i>=1)
-	{
-		f*=i;
-		i--;
-	}
-	printf("factorial of %d is : %d\n",num,f);
-	//using do-whileloop
-	i=num;
-	f=1;
-	do{
-		f*=i;
-		i--;
-	}while(i>=1);
-	printf("factorial of %d is : %d\n",num,f);
-	return 0;
+#include <stdio.h>
+
+int main() {
+    int arr[] = {4, 9, 5, 3, 2, 10};
+    int i, j, t;
+
+    for (i = 0; i < 6; i++) {
+        for (j = i + 1; j < 6; j++) {
+            if (arr[i] > arr[j]) {
+                t = arr[j];
+                arr[j] = arr[i];
+                arr[i] = t;
+            }
+        }
+    }
+
+    for (i = 0; i < 6; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
 }
+
